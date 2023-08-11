@@ -28,9 +28,9 @@ RUN install_packages ca-certificates curl libbz2-1.0 libcom-err2 libcrypt1 libff
 RUN mkdir -p /tmp/bitnami/pkg/cache/ && cd /tmp/bitnami/pkg/cache/ && \
     COMPONENTS=( \
       "python-3.9.17-4-linux-${OS_ARCH}-debian-11" \
-      "java-1.8.382-6-3-linux-${OS_ARCH}-debian-11" \
+      "java-11.0.20-8-2-linux-${OS_ARCH}-debian-11" \
       "yq-4.34.2-1-linux-${OS_ARCH}-debian-11" \
-      "cassandra-4.0.11-1-linux-${OS_ARCH}-debian-11" \
+      "cassandra-4.0.11-1-linux-amd64-debian-11" \
     ) && \
     for COMPONENT in "${COMPONENTS[@]}"; do \
       if [ ! -f "${COMPONENT}.tar.gz" ]; then \
